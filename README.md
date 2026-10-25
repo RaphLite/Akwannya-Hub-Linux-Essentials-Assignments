@@ -9,7 +9,7 @@ This repository documents my learning journey through the Linux Essentials cours
 
 My goal is to build a solid understanding of the Linux operating system, develop practical command-line skills, and explore how Linux supports modern IT infrastructure.
 
-##** Learning Objectives**
+## **Learning Objectives**
 
 Throughout this course, I aim to:
 
