@@ -1,0 +1,83 @@
+# CISCO LINUX ESSENTIALS — MODULE 5
+## The Linux Command Line and Bash Shell
+
+As I continue my Linux Essentials learning journey with Cisco Akwannya Hub, Module 5 introduced me to the Linux Command-Line Interface (CLI), the Bash shell, and how commands are used to interact with the operating system.
+
+One of my key takeaways is that learning the command line makes it easier to work across different Linux distributions. Although the CLI can seem challenging at first because of the commands and their options, understanding its structure can improve productivity, precision, speed, and task automation.
+
+### 1. Understanding the Shell and Terminal
+
+I learned that the terminal provides the interface where commands are entered, while the shell interprets those commands and translates them into actions for the operating system.
+
+The module introduced **Bash**, one of the most commonly used Linux shells. Bash supports useful features such as command history, scripting, aliases, and variables. I also learned how to interpret a command prompt, such as `sysadmin@localhost:~$`, which can display the username, system name, and current directory. The `~` symbol represents the user's home directory.
+
+### 2. Linux Commands, Arguments, and Options
+
+A command is a program that performs an action when executed through the CLI. The general command structure is:
+
+`command [options] [arguments]`
+
+- **Commands** perform specific tasks.
+- **Arguments** specify what the command should act on, such as a file or directory.
+- **Options** modify how a command behaves.
+
+Using the `ls` command as an example, I learned that `ls` lists directory contents, `ls -l` displays a detailed listing, `ls -r` reverses the listing order, and `ls -lh` displays file sizes in a human-readable format.
+
+I also learned that Linux is case-sensitive, meaning commands, filenames, variables, and options must be entered correctly.
+
+### 3. Command History
+
+Bash stores previously executed commands, allowing users to retrieve and reuse them instead of typing everything again.
+
+The `history` command displays the command history, while the Up Arrow key allows users to recall previous commands. I also learned about history shortcuts such as `!!` to execute the most recent command and `!3` to execute the command associated with history entry 3.
+
+These features can make command-line work faster and reduce repetitive typing.
+
+### 4. Variables and the PATH Variable
+
+Variables store information that can be used by the shell or commands. The module introduced two main types:
+
+- **Local variables:** Exist within the current shell and are lost when that shell closes.
+- **Environment variables:** Provide information used by shells and commands across the relevant environment.
+
+I learned how `echo` displays variable values, `export` converts a local variable into an environment variable, `env` lists environment variables, and `unset` removes a variable.
+
+A particularly important concept was the **PATH variable**. It contains a list of directories that the shell searches when locating commands. If a command cannot be found in those directories, the shell may return a “command not found” error. When modifying PATH, it is important to preserve the existing value so that previously accessible commands remain available.
+
+### 5. Understanding Command Types
+
+The module explained that commands can come from different sources within the shell:
+
+- **Internal commands:** Built into the shell, such as `cd`.
+- **External commands:** Executable programs stored in directories, such as `ls`.
+- **Aliases:** Short names that represent longer commands.
+- **Functions:** Named groups of commands that can be executed together.
+
+I learned how `type` identifies a command's type, `which` searches the PATH for an executable's location, and `alias` displays or creates command shortcuts. Functions are particularly useful when several commands need to be executed repeatedly as a group.
+
+### 6. Quoting in Bash
+
+Quoting controls how Bash interprets special characters and text.
+
+- **Double quotes (`" "`):** Prevent some special characters, such as wildcard characters, from being interpreted normally, while still allowing variable substitution.
+- **Single quotes (`' '`):** Prevent the shell from interpreting special characters and variables inside the quoted text.
+- **Backslash (`\`):** Can prevent the shell from interpreting a specific character.
+- **Backquotes (`` ` ` ``):** Allow command substitution, meaning the output of a command can be inserted into another command.
+
+Understanding these differences is important when working with variables, displaying special characters, and combining commands.
+
+### 7. Control Statements
+
+Finally, I learned how control statements allow multiple commands to be executed in sequence or based on whether a previous command succeeds or fails.
+
+- **Semicolon (`;`):** Executes commands sequentially, regardless of whether earlier commands succeed.
+- **Double ampersand (`&&`):** Executes the next command only if the preceding command succeeds.
+- **Double pipe (`||`):** Executes the next command only if the preceding command fails.
+
+These operators provide a foundation for combining commands and controlling the flow of tasks in the terminal and Bash scripts.
+
+### Key Takeaways
+
+Module 5 helped me understand that the Linux command line is more than a place to type commands. It is a powerful way to interact with the operating system, manage command execution, reuse previous work, store information in variables, locate executable programs, and automate repetitive tasks.
+
+I am building a stronger foundation in Bash and Linux CLI concepts, which will be useful as I progress toward more practical Linux administration and scripting skills.
