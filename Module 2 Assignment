@@ -1,0 +1,28 @@
+CISCO LINUX ESSENTIALS — MODULE 2
+**Topic: Operating Systems and Linux Distributions**
+
+### What I Learned
+
+In Module 2, I learned how operating systems work, the differences between major operating systems, and the factors to consider when choosing a Linux distribution.
+
+**1. Understanding Operating Systems**
+
+An operating system manages computer hardware and software resources, runs programs, and allows users and applications to interact with the computer. Examples include Windows, macOS, and Linux.
+
+**2. Choosing an Operating System**
+
+I learned that choosing an operating system depends on several factors, including the machine's role, required functions, support lifecycle, stability, compatibility, cost, and user interface. For example, servers often use a command-line interface to conserve resources, while desktop computers commonly use a graphical interface for ease of use.
+
+**3. Understanding Linux Distributions**
+
+A Linux distribution combines the Linux kernel with utilities, applications, and package management tools. I explored distributions such as Ubuntu, Debian, Fedora, Red Hat Enterprise Linux, SUSE, and Linux Mint, each serving different needs.
+
+I also learned that distributions differ in their release cycles, stability, support options, and intended uses. Enterprise distributions generally prioritize stability and long-term support, while enthusiast distributions may provide newer features more frequently.
+
+**4. Linux in Embedded Systems**
+
+Linux is also used in embedded systems—devices designed to perform specific tasks. Examples include smart TVs, mobile devices, industrial monitoring systems, and Raspberry Pi projects. Its flexibility allows it to operate on different types of hardware, including devices with limited resources.
+
+### Key Takeaway
+
+This module helped me understand that operating systems should be selected based on their intended purpose, available resources, stability, and support requirements. I also learned that Linux is not limited to desktop computers and servers; its flexibility makes it suitable for embedded devices and a wide range of modern technologies.
