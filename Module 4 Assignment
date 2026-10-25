@@ -1,0 +1,83 @@
+# CISCO LINUX ESSENTIALS — MODULE 4
+**Topic: Open-Source Software, Licensing, and Business Models**
+
+## What I Learned
+
+In Module 4, I learned about the principles behind open-source software, how software licenses determine what users can do with a program, and how organizations build successful businesses around open-source projects. The module also explained the importance of software standards and collaboration in the development of Linux.
+
+### 1. Introduction to Open-Source Software
+
+I learned that software is developed using source code, which contains human-readable instructions. For compiled programs, a compiler translates this code into machine-readable instructions, also known as binaries or executables. Interpreted languages, such as Python, Perl, and Bash scripting, work differently because their code is processed by an interpreter.
+
+In closed-source software, users generally receive the executable program without access to its source code. Open-source software takes a different approach by making the source code available under a license that defines how it can be used, modified, and redistributed.
+
+This openness allows developers to inspect code, identify security vulnerabilities, fix bugs, and improve existing programs. Linux demonstrates the value of this collaborative approach, with developers worldwide contributing to its development and to the wider ecosystem of Linux distributions and applications.
+
+I also learned about the history of UNIX and its influence on Linux. UNIX began in 1969, and its development helped establish important practices in operating system design. Standards such as POSIX help different operating systems and applications work together by providing consistent interfaces and expected behavior. Organizations such as IEEE contribute to the development of these standards.
+
+### 2. Understanding Open-Source Licensing
+
+Software licensing determines the rights users receive, including whether they can access the source code, modify the software, redistribute copies, or use it on multiple computers. The module highlighted three important considerations when software is distributed: ownership, the transfer of money, and licensing.
+
+In closed-source software, the creator or company generally retains control over the source code and grants users permission to use the software under specific conditions. Open-source licenses, on the other hand, allow access to source code and grant rights to use, modify, and redistribute software, subject to the particular license terms.
+
+The module used Microsoft Windows and Linux to illustrate these differences. Windows is distributed under Microsoft's proprietary licensing terms, while Linux is associated with the GNU General Public License version 2 (GPLv2). The GPLv2 allows people to modify and redistribute Linux, with conditions that include making the corresponding source code available when distributing covered modified versions.
+
+An important lesson is that **open source does not necessarily mean free of charge**. The term refers primarily to the freedoms and permissions granted by the license, rather than whether money can be charged for the software.
+
+### 3. The Free Software Foundation (FSF)
+
+The Free Software Foundation was founded by Richard Stallman in 1985 to promote software freedom. In this context, freedom means being able to study, share, and modify software, rather than simply obtaining it at no cost.
+
+The FSF supports the concept of *copyleft*, which uses licensing conditions to preserve software freedoms when modified versions are redistributed. Under licenses such as the GPL, certain redistributed modifications must remain available under the same licensing terms.
+
+The module also discussed the differences between GPLv2 and GPLv3, particularly around hardware that prevents users from running modified versions of software. This issue became known as *Tivoization*. The discussion demonstrates that open-source licenses can differ in how they balance users' freedom to modify software with other design and distribution choices.
+
+### 4. The Open Source Initiative (OSI)
+
+The Open Source Initiative was founded in 1998 by Bruce Perens and Eric Raymond. It promotes open-source software and maintains criteria for recognizing open-source licenses.
+
+Unlike the FSF, which emphasizes software freedom and copyleft, the OSI focuses on whether licenses meet its open-source principles. The module introduced permissive licenses such as the BSD and MIT licenses, which generally allow software to be reused, modified, and redistributed with fewer restrictions than copyleft licenses.
+
+For example, BSD-licensed software may be incorporated into a proprietary product, provided the applicable license conditions are followed. This differs from the requirements imposed by copyleft licenses such as the GPL.
+
+The module also introduced the terms **FOSS** (Free and Open Source Software) and **FLOSS** (Free/Libre/Open Source Software). These terms help describe software that provides users with access and freedoms under its license, without confusing those freedoms with the idea of a zero price.
+
+### 5. Creative Commons Licenses
+
+While many open-source licenses are designed for software, Creative Commons licenses are intended for other creative works, such as images, writing, music, and educational materials.
+
+I learned about four main Creative Commons conditions:
+
+- **Attribution (BY):** The original creator must be credited.
+- **ShareAlike (SA):** Adaptations must be shared under the same or a compatible license as specified by the terms.
+- **NonCommercial (NC):** The work cannot be used for commercial purposes under that license.
+- **NoDerivatives (ND):** The work may be redistributed, but adaptations cannot be distributed under the license.
+
+Combining these conditions produces different Creative Commons licenses, such as CC BY, CC BY-SA, and CC BY-NC-ND. The module also introduced CC0, which allows creators to waive their rights to the extent legally possible and make their work available for broad reuse.
+
+This section helped me understand the importance of checking a license before reusing or modifying someone else's work. Different licenses grant different permissions, and users must respect their conditions.
+
+### 6. Open-Source Business Models
+
+I learned that open-source projects can generate revenue even when their source code is available to the public. Since open-source licensing does not automatically prohibit selling software, businesses can earn money by providing additional value around it.
+
+The module explained several business models:
+
+- **Support and warranties:** Companies provide technical assistance, maintenance, and professional support to customers using open-source software.
+- **Commercial distributions and tools:** Businesses package software into products that meet the needs of organizations and enterprise environments.
+- **Hardware and integrated products:** Companies use open-source software in devices and sell the hardware or combine it with proprietary components.
+- **Development and consulting:** Businesses employ developers to improve projects, customize solutions, and support customers.
+- **Commercial services:** Organizations build products and services around open-source technologies to address specific business needs.
+
+Examples from the module include Canonical and Red Hat, which have built businesses around Linux distributions and enterprise services. Wireshark illustrates how a widely used open-source project can attract community contributions and support commercial products and services.
+
+I also learned that businesses may contribute to open-source projects because they depend on them, want to influence their development, or need improvements for internal use. As cloud computing grows, open-source technologies continue to create opportunities for developers, administrators, and businesses.
+
+## Key Takeaways
+
+Module 4 helped me understand that open-source software is built around access, collaboration, and the rights granted by software licenses. I learned how the FSF and OSI approach software freedom and open-source principles, how Creative Commons licenses apply to creative works, and why standards are important for compatibility between systems.
+
+Most importantly, I learned that open source and commercial success can coexist. Companies can build sustainable businesses through support, consulting, software distributions, hardware, and other services while contributing to the wider technology ecosystem.
+
+This module has strengthened my understanding of the legal, technical, and business principles behind Linux and the open-source community.
