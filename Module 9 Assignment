@@ -1,0 +1,94 @@
+# Module 9: Archiving and Compressing Files in Linux
+
+## Introduction
+
+In this module, I learned how Linux handles file archiving and compression through the command line. These techniques help make files easier to store, transfer, and manage, especially when working with large collections of files or creating backups.
+
+**Archiving** combines multiple files into a single file, while **compression** reduces the amount of space needed to store or transmit data. An archive can also be compressed to make it smaller. When files are restored from an archive, the process is called extraction or un-archiving.
+
+## 1. Understanding File Compression
+
+Compression reduces a file's size by encoding its information more efficiently. The module explains two main types:
+
+- **Lossless compression:** Preserves all the original information. After decompression, the file is identical to the original. This is suitable for documents, logs, and software.
+- **Lossy compression:** Removes some information to achieve a smaller file size. It is commonly used for images and audio where small quality differences may not be noticeable.
+
+Some image formats use different compression methods. JPEG uses lossy compression, while GIF and PNG use lossless compression. Repeatedly compressing files that already use compression generally does not reduce their size further, and repeatedly applying lossy compression can significantly reduce quality.
+
+### Common Linux compression commands
+
+- `gzip` compresses files and usually replaces the original file with a `.gz` version.
+- `gunzip` decompresses a `.gz` file and restores the original file.
+- `gzip -d` can also be used for decompression.
+- `bzip2` and `bunzip2` provide another compression and decompression method, potentially achieving smaller files at the cost of more processing time.
+- `xz` and `unxz` compress and decompress files using another algorithm and produce or handle `.xz` files.
+
+The `gzip -l` option displays information about a compressed file, including its compressed size, original size, and compression ratio.
+
+## 2. Archiving Files with `tar`
+
+The `tar` command is a traditional Linux utility for combining multiple files and directories into one archive, commonly called a *tarball*. Unlike compression alone, archiving makes it easier to manage a collection of files as a single unit.
+
+The three main `tar` operations are:
+
+- **Create (`-c`):** Creates a new archive.
+- **List (`-t`):** Displays the contents of an archive without extracting the files.
+- **Extract (`-x`):** Extracts files from an archive.
+
+The `-f` option specifies the archive filename.
+
+### Creating and compressing archives
+
+The module introduces additional options for creating compressed archives:
+
+- `-z` uses gzip compression.
+- `-j` uses bzip2 compression.
+- `-v` displays the files being processed.
+
+For example, `tar -cf alpha_files.tar alpha*` creates an archive containing files whose names begin with `alpha`. Adding `-z` creates a gzip-compressed archive, while `-j` uses bzip2 compression.
+
+Common archive extensions include `.tar` for an uncompressed archive, `.tar.gz` or `.tgz` for gzip-compressed archives, and `.tar.bz2`, `.tbz`, or `.tbz2` for bzip2-compressed archives.
+
+### Listing archive contents
+
+The `-t` option lets users inspect an archive before extracting it. This is useful for checking which files and directory paths are stored inside.
+
+For compressed archives, the appropriate compression option must also be specified. For example, `tar -tjf folders.tbz` lists the contents of a bzip2-compressed archive.
+
+An important detail is that `tar` automatically includes files inside subdirectories when archiving directories and preserves their paths within the archive.
+
+### Extracting files from archives
+
+The `-x` option extracts an archive, while `-v` provides a detailed list of the files being processed. The module also demonstrates extracting a specific file by supplying its exact path as stored in the archive.
+
+The order of options matters when using `tar`. In particular, `-f` expects the archive filename to follow it, so placing options incorrectly can cause the command to interpret an option character as a filename.
+
+## 3. Working with ZIP Files
+
+ZIP is a widely used archive format, particularly in Microsoft environments. Linux supports it through the `zip` and `unzip` commands.
+
+Unlike `tar`, the `zip` command combines archiving and compression by default.
+
+### Creating ZIP archives
+
+The basic structure is `zip archive.zip files...`. The command creates an archive and compresses the specified files.
+
+One important difference is that `zip` does not automatically include files inside subdirectories. To include a directory and its contents recursively, use the `-r` option, as demonstrated by `zip -r School.zip School`.
+
+### Listing ZIP archive contents
+
+The command `unzip -l` displays the files stored in a ZIP archive without extracting them. This helps users inspect the archive before restoring its contents.
+
+### Extracting ZIP archives
+
+The `unzip` command extracts files by default. If a file with the same name already exists, it may prompt the user to decide whether to replace, skip, replace all, skip all, or rename the file.
+
+To extract a particular file, its path inside the archive must match. Wildcards can also be used to select multiple files that match a pattern.
+
+When existing files could be overwritten, extracting into a separate directory is a useful way to avoid unwanted changes.
+
+## Key Takeaways
+
+This module helped me understand the difference between archiving and compression, the distinction between lossless and lossy compression, and the Linux tools used to manage compressed files and archives.
+
+I also learned how to use `gzip`, `gunzip`, `tar`, `zip`, and `unzip` to compress files, create archives, inspect their contents, and extract files. Understanding the differences between these commands is important because they do not all behave in the same way, particularly when handling directories and existing files.
