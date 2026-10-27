@@ -1,0 +1,69 @@
+# CISCO LINUX ESSENTIALS — MODULE 7
+## Navigating the Linux Filesystem
+
+### 1. Introduction
+Linux treats everything as a file, including directories, which are used to organize files in a hierarchical structure. Understanding how to navigate and manage files and directories through the command line is an essential Linux skill, even when graphical file-management tools are available.
+
+### 2. Understanding the Linux Directory Structure
+Unlike Windows, which organizes storage devices using drive letters such as `C:` and `D:`, Linux uses a single filesystem hierarchy that begins at the **root directory (`/`)**. Physical devices are accessed through directories rather than separate drive letters.
+
+Some important directories in the Linux filesystem include `/boot`, `/etc`, `/home`, `/root`, `/tmp`, `/usr`, and `/var`.
+
+The `/home` directory contains individual users' home directories. For example, `/home/sysadmin` is the home directory of a user named `sysadmin`. Users typically begin their shell sessions in their home directories and have greater control over the files stored there.
+
+The tilde (`~`) represents the current user's home directory. For example, `~` can represent `/home/sysadmin`, while `~bob` refers to the home directory of a user named `bob`.
+
+### 3. Checking and Changing Directories
+The `pwd` command displays the current working directory. This helps users identify their location within the filesystem.
+
+The `cd` command is used to change directories. For example, `cd Documents` moves into the Documents directory within the current directory, while using `cd` without an argument returns the user to their home directory.
+
+A successful `cd` command normally produces no output. However, attempting to enter a directory that does not exist produces an error message.
+
+### 4. Understanding Paths
+A path identifies the location of a file or directory. Linux has two main types of paths:
+
+- **Absolute paths:** Specify the complete location starting from the root directory (`/`). For example, `/home/sysadmin/Documents`.
+- **Relative paths:** Specify a location based on the current working directory. For example, `School/Art` moves through the School directory into its Art subdirectory.
+
+Linux also provides useful path shortcuts:
+- `..` represents the parent directory, one level above the current directory.
+- `.` represents the current directory.
+
+These shortcuts make navigation easier without requiring users to type complete paths every time.
+
+### 5. Listing Files and Directories
+The `ls` command displays the contents of a directory. It can list files in the current directory or accept a path to display the contents of another directory.
+
+Important options include:
+
+- `ls -a` — displays all files, including hidden files.
+- `ls -l` — displays a detailed listing containing file metadata.
+- `ls -lh` — displays detailed information with human-readable file sizes.
+- `ls -R` — lists directory contents recursively, including subdirectories.
+- `ls -S` — sorts files by size, from largest to smallest.
+- `ls -t` — sorts files by modification time, with the most recently modified first.
+- `ls -r` — reverses the sorting order.
+- `ls --full-time` — displays the complete timestamp when used with a long listing.
+
+These options can be combined. For example, `ls -lSh` displays detailed file information, sorts by size, and presents sizes in a human-readable format. Recursive listings should be used carefully because they can produce large amounts of output.
+
+### 6. Hidden Files and File Metadata
+Linux hides files and directories whose names begin with a dot (`.`) from the default `ls` output. These often contain configuration settings. For example, `.bashrc` stores shell customization settings, including variables and aliases.
+
+The `ls -l` command displays metadata for each listed item, including:
+
+- **File type:** Indicates whether an item is a regular file, directory, symbolic link, or another file type.
+- **Permissions:** Shows how users can access the file.
+- **Hard link count:** Indicates the number of hard links pointing to the file.
+- **User and group owners:** Identify the account and group associated with the file.
+- **File size:** Displays the size in bytes.
+- **Timestamp:** Shows when the file was last modified.
+- **File name:** Identifies the file or directory.
+
+For directories, the size shown in a long listing is not the total size of everything inside. The timestamp indicates when an item was added to or removed from the directory. Symbolic links can display the path to the file they reference.
+
+### 7. Key Takeaways
+This module explains how Linux organizes files and directories and how to navigate that structure efficiently. The most important skills are understanding the root and home directories, using absolute and relative paths, applying navigation shortcuts, and using `ls` options to inspect files and their metadata.
+
+Knowing these commands makes command-line navigation more practical and provides a foundation for learning additional Linux file-management operations.
