@@ -1,0 +1,80 @@
+# CISCO LINUX ESSENTIALS — MODULE 8
+## Managing Files and Directories in Linux
+
+### 1. Introduction
+Managing files and directories through the Linux command line is an essential skill, even when graphical tools are available. Linux is case-sensitive, meaning filenames such as `hello.txt`, `Hello.txt`, and `HELLO.txt` are treated as different files. Linux also uses the UTF-8 character standard, which is based on ASCII.
+
+### 2. Understanding Globbing
+Globbing allows users to specify filename patterns using wildcard characters. The shell interprets these patterns before passing the expanded filenames to a command, making it possible to work with multiple files at once.
+
+The main glob characters covered in this module are:
+
+- `*` — matches zero or more characters. For example, `/etc/t*` matches entries in `/etc` that begin with `t`.
+- `?` — matches exactly one character. Multiple question marks can match filenames with a specific number of characters.
+- `[ ]` — matches one character from a specified set or range. For example, `[a-d]*` matches names beginning with a letter from `a` to `d`.
+- `[! ]` — inside square brackets, `!` negates the character set. For example, `[!DP]*` matches names that do not begin with `D` or `P`.
+
+Globs can be combined to create more specific patterns. When using `ls` with glob patterns, the `-d` option is useful because it displays matching directory names rather than listing the contents of each matching directory.
+
+### 3. Copying Files
+The `cp` command copies files from a source to a destination.
+
+**Syntax:** `cp source destination`
+
+Important options include:
+
+- `-v` — verbose mode; displays information about the copy operation.
+- `-i` — interactive mode; asks for confirmation before overwriting an existing file.
+- `-n` — prevents overwriting an existing destination file.
+- `-r` — copies directories and their contents recursively.
+
+When copying a file into a directory, the original filename is retained unless a different destination filename is specified. By default, copying to an existing filename can overwrite its contents, so the interactive or no-clobber options can help prevent accidental data loss.
+
+### 4. Moving and Renaming Files
+The `mv` command moves files from one location to another. Unlike copying, moving removes the file from its original location and places it at the destination.
+
+**Syntax:** `mv source destination`
+
+The command can also rename files. If the destination is a new filename rather than a different directory, the file remains in its current directory but receives the new name.
+
+Useful options include:
+
+- `-i` — asks before overwriting an existing destination.
+- `-n` — prevents overwriting an existing destination.
+- `-v` — displays details of the move operation.
+
+Unlike `cp`, `mv` can move directories without requiring a recursive option. However, moving files may fail when the user lacks the necessary permissions.
+
+### 5. Creating Files
+The `touch` command creates an empty file when the specified filename does not already exist.
+
+For example:
+
+`touch sample`
+
+This creates a file named `sample` with a size of zero bytes. Empty files can serve as placeholders or be populated with content later using a text editor or another suitable program.
+
+### 6. Removing Files and Directories
+The `rm` command removes files. By default, it deletes files without asking for confirmation, so using it carelessly can cause data loss.
+
+Important options and commands include:
+
+- `rm -i` — asks for confirmation before deleting each file.
+- `rm -r` — removes directories and their contents recursively.
+- `rmdir` — removes an empty directory only.
+
+The module emphasizes caution when deleting files, particularly when glob patterns are used to select multiple files. The deletion performed by `rm` is not moved to a trash or recycle bin, and recovery may not be possible. Using interactive confirmation can reduce the risk of deleting the wrong files.
+
+### 7. Creating Directories
+The `mkdir` command creates a new directory.
+
+For example:
+
+`mkdir test`
+
+This creates a directory named `test` in the current working directory, provided the name is available and the user has the required permissions.
+
+### 8. Key Takeaways
+This module introduces essential Linux file-management operations. Globbing helps select files through patterns, while `cp` copies files, `mv` moves or renames them, `touch` creates empty files, `rm` removes files and directories, `rmdir` removes empty directories, and `mkdir` creates directories.
+
+The most important practical lesson is to understand each command's behavior before executing it, especially when overwriting or deleting data. Options such as `-i` and `-n` provide useful safeguards against accidental changes.
